@@ -1,0 +1,93 @@
+html {
+    background-color: #1e1e1e;
+}
+
+.title {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: 0.7em;
+}
+
+.textInput {
+    width: auto;
+    height: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textInput input[type=text] {
+    width: 30em;
+    height: 1.5em;
+    border-radius: 2em;
+    padding: 0.5em;
+}
+
+.textInput input[type=submit] {
+    width: 6em;
+    border-radius: 2em;
+    height: 2em;
+}
+
+.textBody {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    background-color: #252525;
+    border-radius: 3em;
+}
+
+.word {
+    color: #FFFFFF;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.3em;
+}
+
+.word h1 {
+    font-size: 3em;
+    padding: 0.1em;
+    font-family: 'Libre Franklin', 'Arial';
+}
+
+.word .breakingBadSymbol {
+    background-image: linear-gradient(135deg,#14463c,#016b25);
+    height: 5em;
+    width: 5em; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', 'sans-serif';
+    border-width: 0.15em;
+    border-style: solid;
+    border-color: #FFFFFF;
+}
+
+.word .breakingBadSymbol .periodicSymbol {
+    font-size: 3em;
+}
+
+.word .breakingBadSymbol .periodicNumber {
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

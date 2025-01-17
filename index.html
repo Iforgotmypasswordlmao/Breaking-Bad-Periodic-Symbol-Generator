@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Periodic Symbol Text</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="title">
+        <div class="word">
+            <div class="breakingBadSymbol">
+                <h2 class="periodicSymbol">Br</h2>
+                <h3 class="periodicNumber">35</h3>
+            </div>
+            <h1>eaking</h1>
+        </div>
+        <div class="word">
+            <div class="breakingBadSymbol">
+                <h2 class="periodicSymbol">Ba</h2>
+                <h3 class="periodicNumber">56</h3>
+            </div>
+            <h1>d</h1>
+        </div>
+        <div class="word">
+            <div class="breakingBadSymbol">
+                <h2 class="periodicSymbol">P</h2>
+                <h3 class="periodicNumber">15</h3>
+            </div>
+            <h1>eriodic</h1>
+        </div>
+        <div class="word">
+            <div class="breakingBadSymbol">
+                <h2 class="periodicSymbol">S</h2>
+                <h3 class="periodicNumber">16</h3>
+            </div>
+            <h1>ymbol</h1>
+        </div>
+        <div class="word">
+            <div class="breakingBadSymbol">
+                <h2 class="periodicSymbol">Ge</h2>
+                <h3 class="periodicNumber">32</h3>
+            </div>
+            <h1>nerator</h1>
+        </div>
+    </div>
+    <div class="textInput">
+        <form>
+            <input type="text" name="sentence" placeholder="Enter here">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="textBody">
+            {% for names in periodicWords %}
+                <div class="word">
+
+                    {% if names.found %}
+
+                        <h1>{{ names.beforeElement }}</h1>
+                        <div class="breakingBadSymbol">
+                            <h2 class="periodicSymbol">{{ names.Element.Symbol }}</h2>
+                            <h3 class="periodicNumber">{{ names.Element.Number }}</h3>
+                        </div>
+                        <h1>{{ names.afterElement }}</h1>
+
+                    {% else %}
+
+                        <h1>{{ names.name }}</h1>
+
+                    {% endif %}
+
+                </div>
+            
+        {% endfor %}
+
+    </div>
+    
+</body>
+</html>
